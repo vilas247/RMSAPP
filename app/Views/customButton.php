@@ -12,7 +12,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-10 offset-md-1">
-            <form action="<?= getenv('app.baseURL') ?>settings/updateCustomButton" method="POST" >
+            <form action="<?= getenv('app.baseURL') ?>settings/updateCustomButton" id="updateCustomButton" method="POST" >
 			<div class="card">
                   <div class="card-header">
                     <div class="row">
@@ -86,7 +86,11 @@
   </body>
 </html>
 <script src="<?= getenv('app.ASSETSPATH') ?>js/jquery-min.js"></script>
+<script src="<?= getenv('app.ASSETSPATH') ?>js/toaster/jquery.toaster.js"></script>
+<script src="<?= getenv('app.ASSETSPATH') ?>js/247rmsloader.js"></script>
 <script>
+	var text = "Please wait...";
+	var current_effect = "bounce";
 	var id = '<?= $container_id ?>';
 	var css = '<?= base64_encode($css_prop) ?>';
 	var html_code = '<?= $html_code ?>';
@@ -94,5 +98,40 @@
 		$('body #container_id').val(id);
 		$('body #css_prop').val(window.atob(css));
 		$('body #html_code').val(html_code);
+	});
+	$('body').on('submit','#updateCustomButton',function(e){
+		$("body").waitMe({
+			effect: current_effect,
+			text: text,
+			bg: "rgba(255,255,255,0.7)",
+			color: "#000",
+			maxSize: "",
+			waitTime: -1,
+			source: "images/img.svg",
+			textPos: "vertical",
+			fontSize: "",
+			onClose: function(el) {}
+		});
+	});
+	var getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = window.location.search.substring(1),
+			sURLVariables = sPageURL.split("&"),
+			sParameterName,
+			i;
+
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split("=");
+
+			if (sParameterName[0] === sParam) {
+				return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+			}
+		}
+		return false;
+	};
+	$(document).ready(function(){
+		var updated = getUrlParameter('updated');
+		if(updated){
+			$.toaster({ priority : "success", title : "Success", message : "RMS Payments Custom button updated for your Store,Please wait for some time and check the changes" });
+		}
 	});
 </script>

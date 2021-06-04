@@ -8,7 +8,7 @@
  -->
 <?php include('header.php');
 ?>
-    <main class="main-content">
+    <main class="main-content retail-merchant">
       <div class="container">
         <div class="col-lg-10 col-12 mx-auto">
         <div class="row">
@@ -159,7 +159,7 @@
     <script src="<?= getenv('app.ASSETSPATH') ?>js/jquery-min.js"></script>
     <script src="<?= getenv('app.ASSETSPATH') ?>js/bootstrap.min.js"></script>
     <script src="<?= getenv('app.ASSETSPATH') ?>js/bootstrap.bundle.min.js"></script>
-	<script src="<?= getenv('app.ASSETSPATH') ?>js/247carstreamloader.js"></script>
+	<script src="<?= getenv('app.ASSETSPATH') ?>js/247rmsloader.js"></script>
 	<script src="<?= getenv('app.ASSETSPATH') ?>js/toaster/jquery.toaster.js"></script>
 <script type="text/javascript">
 		var text = "Please wait...";

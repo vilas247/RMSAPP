@@ -123,7 +123,7 @@ class Rmspay extends BaseController
 					$req['signature'] = \SettingsViews::createSignature($req, $key).'|merchantID,action,type,countryCode,currencyCode,amount,orderRef,transactionUnique,redirectURL';
 					$data = array(
 								'id'=>'247cardstream_form',
-								'url'=>getenv('bigcommerceapp.CARDSTREAM_URL'),
+								'url'=>getenv('bigcommerceapp.RMS_URL'),
 								'modal'=>true,
 								'data'=>$req,
 							);

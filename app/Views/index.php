@@ -23,19 +23,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
     <link href="<?= getenv('app.ASSETSPATH') ?>css/style.css" rel="stylesheet">
-    <link href="<?= getenv('app.ASSETSPATH') ?>css/247carstreamloader.css" rel="stylesheet">
+    <link href="<?= getenv('app.ASSETSPATH') ?>css/247rmsloader.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
   </head>
   <body>
-    <main class="main-content">
+    <main class="main-content retail-merchant py-4">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8 col-lg-6 offset-lg-3 offset-md-2">
-            <div class="col-sm-6 mx-auto col-6">
-                <img src="<?= getenv('app.ASSETSPATH') ?>img/card-saver.png">
+            <div class="col-sm-6 mx-auto col-6 my-4">
+                <img src="<?= getenv('app.ASSETSPATH') ?>img/rms.png">
             </div>
             <div class="login-form pg-30">
               <div class="text-center py-3">
@@ -52,7 +52,7 @@
                 <div class="mb-3 input-group">
                   <small><b>How can I </b><a href="#">get my client id, client secret and terminal id?</a></small>
                 </div>
-                <button type="submit" class="btn btn-primary d-block w-100 btn-lg">Submit</button>
+                <button type="submit" class="btn submit-but d-block w-100 btn-lg">Submit</button>
               </form>
             </div>
           </div>        
@@ -62,7 +62,7 @@
     <script src="<?= getenv('app.ASSETSPATH') ?>js/jquery-min.js"></script>
     <script src="<?= getenv('app.ASSETSPATH') ?>js/bootstrap.min.js"></script>
     <script src="<?= getenv('app.ASSETSPATH') ?>js/bootstrap.bundle.min.js"></script>
-    <script src="<?= getenv('app.ASSETSPATH') ?>js/247carstreamloader.js"></script>
+    <script src="<?= getenv('app.ASSETSPATH') ?>js/247rmsloader.js"></script>
     <script type="text/javascript">
 		$(document).ready(function() {
 			var text = "Please wait...";

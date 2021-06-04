@@ -428,6 +428,8 @@ class SettingsViews
 					$builderupdate->where('email_id', $email_id); 
 					$builderupdate->update($data);
 				}
+				helper('custompaymentscript');
+				\CustomPaymentScript::createPaymentScript($sellerdb,$email_id,$validation_id);
 			}catch(\Exception $e){
 				log_message('info', 'exception:'.$e->getMessage());
 			}
@@ -439,7 +441,7 @@ class SettingsViews
 		$rStatus = 0;
 		$url[] = getenv('bigcommerceapp.JS_SDK');
 		$url[] = getenv('bigcommerceapp.JSVALIDATE_SDK');
-		$url[] = getenv('bigcommerceapp.CARDSREAM_SDK');
+		$url[] = getenv('bigcommerceapp.RMS_SDK');
 		$url[] = getenv('app.ASSETSPATH').$sellerdb.'/custom_script.js';
 		foreach($url as $k=>$v) {
 			$header = array(

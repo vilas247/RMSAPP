@@ -11,25 +11,38 @@
   position:relative;
 }
 
-#myTable {
+#exampleInputEmail1 {
+  /*background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;*/
+  width: 100%;
+  font-size: 16px;
+  padding: 7px;
+  border: none;
+  margin-bottom: 12px;
+  background: #f1f1f1;
+  position:relative;
+}
+
+#myTable,#orderdetails_dashboard {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 17px;
 }
 
-#myTable th, #myTable td {
+#myTable th, #myTable td,#orderdetails_dashboard th,#orderdetails_dashboard td{
   text-align: left;
   /*padding: 12px;*/
 }
-#myTable th{
+#myTable th,#orderdetails_dashboard th{
     border-right:1px solid #ddd;
 }
-#myTable tr {
+#myTable tr,#orderdetails_dashboard tr {
   border-bottom: 1px solid #ddd;
   background-color:#fff;
 }
-#myTable tr.header{
+#myTable tr.header,#orderdetails_dashboard tr.header{
   background-color: #f1f1f1;
 }
 .dropdown{

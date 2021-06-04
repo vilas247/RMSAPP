@@ -331,6 +331,6 @@ class Settings extends BaseController
 				\CustomPaymentScript::createPaymentScript($clientDetails['sellerdb'],$clientDetails['email_id'],$clientDetails['validation_id']);
 			}
 		}
-		return redirect()->to('/settings/customButton');
+		return redirect()->to('/settings/customButton?updated=1');
 	}
 }
